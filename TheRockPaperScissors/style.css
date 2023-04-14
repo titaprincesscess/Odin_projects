@@ -11,6 +11,18 @@ html{
     height: 15pc;
     width: 15pc;
 }
+#rock{
+    background: url("/pictures/handsigns/rock.png");
+    background-size: contain;
+}
+#paper{
+    background: url("/pictures/handsigns/paper.png");
+    background-size: contain;
+}
+#scissors{
+    background: url("/pictures/handsigns/scissors.png");
+    background-size: contain;
+}
 .whiteBoard{
 height: 15pc;
 width: 45pc;
