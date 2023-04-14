@@ -1,0 +1,28 @@
+html{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* *{
+    border: 1px solid black;
+} */
+.mainContainer, .gameContainer, .whiteBoard, .scores{
+    display: flex;
+}
+.gameContainer button {
+    height: 15pc;
+    width: 15pc;
+}
+.whiteBoard{
+height: 15pc;
+width: 45pc;
+flex-direction: column;
+}
+.scores{
+    flex-direction: row;
+}
+.whiteBoard p{
+    height: auto;
+    width: auto;
+}
+.scores{
+    justify-content: space-evenly;
+}
