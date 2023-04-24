@@ -1,0 +1,33 @@
+html{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 9px;  
+}
+/* *{
+} */
+.divSize:hover{
+  background-color:  rgb(248, 12, 236);
+}
+.divSize{
+  height: 16px;
+  width: 16px;
+  border: 2px solid rgb(248, 12, 236);
+}
+.divContainer{
+  justify-content: center;
+  width: auto;
+} 
+div {
+    display: flex;
+  }
+  .button{
+    height: 35px;
+    width: 130px;
+    color: white;
+    background-color: rgb(88, 189, 244);
+    border: 0;
+  }
+  .button:hover{
+    color: rgb(79, 76, 76);
+    background-color: rgb(220, 204, 236) ;
+    box-shadow: inset;
+  }
