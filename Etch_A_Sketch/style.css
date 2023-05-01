@@ -7,15 +7,16 @@ html{
   font-size: 8px;  
 }
 .coloredBackgroundDiv{
-  background-color: rgb(220, 73, 233) ;
+  border-color: rgb(236, 248, 12) ;
+
 }
 .divSize:hover{
-  background-color:  rgb(248, 12, 236);
+border-color:  rgb(236, 248, 12);
 }
 .divSize{
   height: 16px;
   width: 16px;
-  border: 2px solid rgb(220, 73, 233);
+  border: 2px solid rgb(251, 6, 35);
 }
 .divContainer{
   justify-content: center;
@@ -26,6 +27,10 @@ div {
   }
   .buttonParentDiv{
     flex: auto;
+  }
+  input[type=color]{
+    height: 5svh;
+   width: revert;
   }
   .button{
     height: 56px;
@@ -39,4 +44,5 @@ div {
     color: rgb(79, 76, 76);
     background-color: rgb(220, 204, 236) ;
   }
+
 
