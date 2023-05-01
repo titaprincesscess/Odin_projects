@@ -1,8 +1,10 @@
+let container = document.querySelector(".divContainer");
+let content = document.querySelector(".content");
 let parentDivContainer;
 let childDivContainer;
 let button;
 let num = 0;
-let selectedCanvasColor = "#FFFFFF";
+let selectedCanvasColor = "#DFDC2E";
 let colorPicker;
 
 for (let counter = 0; counter < 1; counter++) {
@@ -34,30 +36,49 @@ color.appendChild(colorPicker);
 colorPicker.classList.add("input");
 colorPicker.setAttribute("type", "color");
 colorPicker.setAttribute("id", "colorPicker");
+colorPicker.setAttribute("value", "#FCB82C");
 
 const buttons = Array.from(document.querySelectorAll(".button"));
 buttons.forEach((button) =>
   button.addEventListener("click", () => {
     if (button.id == "Reset") {
       resetCanvas();
+      makeWelcomeScreen();
     } else if (button.id == "26x26") {
+      if (content) {
+        container.remove();
+      }
       num = 26;
       resetCanvas();
       createDivBoxes(num);
     } else if (button.id == "38x38") {
+      if (content) {
+        container.remove();
+      }
       num = 38;
       resetCanvas();
       createDivBoxes(num);
     } else if (button.id == "44x44") {
+      if (content) {
+        container.remove();
+      }
       num = 44;
       resetCanvas();
       createDivBoxes(num);
     } else if (button.id == "70x70") {
+      if (content) {
+        container.remove();
+      }
       num = 70;
       resetCanvas();
       createDivBoxes(num);
     } else if (button.id == "Start") {
-      startDrawing();
+      const div = document.querySelector(".divSize");
+      if (!div) {
+        alert("You cannot draw without a canvas.");
+      } else {
+        startDrawing();
+      }
     } else if (button.id == "color") {
       //color picker
     }
@@ -106,4 +127,30 @@ function startDrawing() {
       colorPicker.click();
     })
   );
+}
+window.addEventListener("load", makeWelcomeScreen);
+function makeWelcomeScreen() {
+  let arrayContent = [
+    "HOW TO PLAY Etch-A-Sketch (each-a-sketch)",
+    "Click on any of the buttons at the top menu between 26x26 to 70x70 to make a canvas.",
+    "Click Start to start sketching.",
+    'If you want to change color, you can either click the color picker on the upper right corner of the menu that says "Color", or click anywhere on the grid.',
+    "To clear the screen, just click the 'Reset' button or any of the canvas' sizes.",
+  ];
+  container = document.createElement("div");
+  document.body.appendChild(container);
+  content = document.createElement("div");
+  container.appendChild(content);
+  container.classList.add("divContainer");
+  content.classList.add("content");
+  let h1 = document.createElement("h1");
+  content.appendChild(h1);
+  h1.textContent = arrayContent[0];
+  let ul = document.createElement("ul");
+  content.appendChild(ul);
+  for (let counter = 1; counter < arrayContent.length; counter++) {
+    let li = document.createElement("li");
+    ul.appendChild(li);
+    li.textContent = arrayContent[counter];
+  }
 }

@@ -6,10 +6,6 @@ html{
   border: 0;
   font-size: 8px;  
 }
-.coloredBackgroundDiv{
-  border-color: rgb(236, 248, 12) ;
-
-}
 .divSize:hover{
 border-color:  rgb(236, 248, 12);
 }
@@ -22,6 +18,23 @@ border-color:  rgb(236, 248, 12);
   justify-content: center;
   width: auto;
 } 
+.divContainer{
+  justify-content: center;
+}
+.content{
+flex-direction: column;
+font-family:monospace;
+font-size: xx-large;
+line-height: 8svh;
+width: 60cqw;
+background-color: white;
+}
+h1{
+  text-align: center;
+  line-height: 14svh;
+  border-bottom: 2px dashed black;
+  background-color: white;
+}
 div {
     display: flex;
   }
@@ -43,6 +56,10 @@ div {
   .button:hover{
     color: rgb(79, 76, 76);
     background-color: rgb(220, 204, 236) ;
+  }
+  h1:hover,
+  li:hover{
+    color: rgb(234, 207, 4);
   }
 
 
