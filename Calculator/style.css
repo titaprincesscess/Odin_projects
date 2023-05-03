@@ -1,0 +1,67 @@
+/* style */
+html{
+    font-family: monospace;
+}
+*{
+    border: 1px solid black;
+    padding: 0;
+    margin: 0;
+}
+div{
+    display: flex;
+}
+.main-container{
+justify-content: center;
+}
+.main-container,
+.view-container,
+.container,
+.operators,
+.others,
+.view-container{
+    flex-direction: column;
+}
+.container{
+    width: 777px;
+}
+.view-container >*{
+    height: 75px;
+}
+
+.buttons-container {
+    display: flex;
+    flex-direction: row;
+}
+.numbers{
+        height: 61svh;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 155svh;
+    }
+.numbers>*{
+/* flex: 1 1 23svh; */
+}
+.operators{
+height: 61svh;
+    flex-wrap: wrap;
+    width: 476px;
+}
+.operators>*{
+    height: 98.2px;
+}
+.functions{
+    flex-wrap: wrap;
+    height: 12px;
+    width: 12px;
+}
+.equal-clear{
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 12px;
+    width: 12px;
+}
+.equal-clear>*{
+    flex: auto;
+    width: 131px;
+    height: 199px;
+}
