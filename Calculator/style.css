@@ -1,9 +1,9 @@
 /* style */
 html{
     font-family: monospace;
+    text-align: center;
 }
 *{
-    border: 1px solid black;
     padding: 0;
     margin: 0;
 }
@@ -11,7 +11,7 @@ div{
     display: flex;
 }
 .main-container{
-justify-content: center;
+align-items: center;
 }
 .main-container,
 .view-container,
@@ -22,7 +22,9 @@ justify-content: center;
     flex-direction: column;
 }
 .container{
+    height: 631px;
     width: 777px;
+    justify-content: center;
 }
 .view-container >*{
     height: 75px;
@@ -39,7 +41,7 @@ justify-content: center;
         width: 155svh;
     }
 .numbers>*{
-/* flex: 1 1 23svh; */
+flex: 1 1 23svh;
 }
 .operators{
 height: 61svh;
@@ -49,19 +51,21 @@ height: 61svh;
 .operators>*{
     height: 98.2px;
 }
-.functions{
-    flex-wrap: wrap;
-    height: 12px;
-    width: 12px;
-}
 .equal-clear{
     flex-direction: row;
     flex-wrap: wrap;
-    height: 12px;
-    width: 12px;
+    width: 93px;
 }
-.equal-clear>*{
+.equal-clear div{
     flex: auto;
-    width: 131px;
-    height: 199px;
+    height: 198px;
+    width: 93px;
+}
+
+.operations,
+.result,
+.numbers div,
+.operators div,
+.equal-clear div{
+    border: 1px solid black;
 }
