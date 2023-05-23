@@ -44,12 +44,14 @@ align-items: center;
 flex: 1 1 23svh;
 }
 .operators{
-height: 61svh;
+    height: 61svh;
     flex-wrap: wrap;
     width: 476px;
+    align-content: center;
 }
 .operators>*{
     height: 98.2px;
+    width: 103px;
 }
 .equal-clear{
     flex-direction: row;
@@ -58,10 +60,9 @@ height: 61svh;
 }
 .equal-clear div{
     flex: auto;
-    height: 198px;
+    height: 131px;
     width: 93px;
 }
-
 .operations,
 .result,
 .numbers div,
