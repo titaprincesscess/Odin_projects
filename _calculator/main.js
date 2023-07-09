@@ -20,8 +20,7 @@ BUTTONS.forEach((button) =>{
     else if(button.textContent =="/"){
       FUNCTION.innerHTML = "DIVISION";}
     else if(button.textContent == reg){
-      
-    }
+      RESULT.innerHTML = button.textContent ;}
 
 
   });

@@ -3,8 +3,8 @@
     font-family:'Courier New', Courier, monospace ;
     border: 1px solid black;
 }
-.results :nth-child(1){
-
+.function{
+    align-items: end;
 }
 .results, .results div {
     display: flex;
