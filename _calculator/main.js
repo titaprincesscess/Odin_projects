@@ -19,7 +19,7 @@ BUTTONS.forEach((button) =>{
       FUNCTION.innerHTML = "ADDITION";}
     else if(button.textContent =="/"){
       FUNCTION.innerHTML = "DIVISION";}
-    else if(button.textContent ==/^\d+$/){
+    else if(button.textContent .match(/[0-9]+/)){
       RESULT.innerHTML = button.textContent ;}
 
 
