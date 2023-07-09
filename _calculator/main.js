@@ -8,6 +8,12 @@ EQUALS.addEventListener('click', ()=>{
   prompt("hello");
 });
 
+BUTTONS.forEach((button) =>{
+  button.addEventListener('click', ()=>{
+    
+  });
+});
+
 function calculate(operator, num1, num2) {
   switch (operator) {
     case "+":
