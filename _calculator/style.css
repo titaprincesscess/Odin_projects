@@ -6,8 +6,14 @@
     display: flex;
     flex-direction: column;
 }
-
+.results div {
+    height: 48px;
+}
 .buttons, .buttons div{
 display: flex;
 flex-direction: row;
+}
+.buttons div{
+    height: 19px;
+    flex: auto;
 }
