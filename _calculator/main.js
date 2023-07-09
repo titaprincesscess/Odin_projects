@@ -1,4 +1,7 @@
 // Function to perform the calculation based on operator and operands
+const RESULT = Document.querySelector(".results :first-child");
+const FUCNTION = Document.querySelector(".results :last-child");
+
 function calculate(operator, num1, num2) {
   switch (operator) {
     case "+":
