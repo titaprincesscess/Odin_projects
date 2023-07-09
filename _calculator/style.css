@@ -13,9 +13,14 @@
 .results div {
     height: 48px;
 }
-.buttons, .buttons div{
+.buttons, .buttons div, .footer{
 display: flex;
 flex-direction: row;
+}
+.footer div{
+    width: auto;
+    flex: auto;
+    align-items: center;
 }
 .buttons div{
     height: 19px;
