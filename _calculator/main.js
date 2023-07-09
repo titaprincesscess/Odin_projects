@@ -4,8 +4,9 @@ const FUNCTION = document.querySelector(".function");
 const EQUALS = document.querySelector(".equals");
 const BUTTONS = document.querySelectorAll('.buttons div');
 var num1=""; 
-var num2=['']; 
-var result=[''];
+var operator="";
+var num2=""; 
+var result="";
 
 EQUALS.addEventListener('click', ()=>{
   prompt("hello");
@@ -20,17 +21,23 @@ BUTTONS.forEach((button) =>{
 
     if(num1!=""){
     if (button.textContent == "-"){
+      operator=button.textContent;
     FUNCTION.innerHTML = "SUBTRACTION";}
     else if (button.textContent =="*"){
+      operator=button.textContent;
       FUNCTION.innerHTML = "MULTIPLICATION";}
     else if(button.textContent =="+"){
+      operator=button.textContent;
       FUNCTION.innerHTML = "ADDITION";}
     else if(button.textContent =="/"){
+      operator=button.textContent;
       FUNCTION.innerHTML = "DIVISION";}
+    }else if(num1!="" && operator!=""){
+      //num2
+      if(button.textContent.match(/[0-9]+/)){
+      num2+=button.innerText;}
     }
      
-    
-
   });
 });
 
