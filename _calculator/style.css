@@ -20,7 +20,7 @@ flex-direction: row;
 .footer div{
     width: auto;
     flex: auto;
-    align-items: center;
+   text-align: center;
 }
 .buttons div{
     height: 19px;
