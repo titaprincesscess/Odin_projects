@@ -2,8 +2,8 @@
 * {
     border: 1px solid black;
 }
-.results :first-child{
-    
+.results :nth-child(1){
+
 }
 .results, .results div {
     display: flex;
