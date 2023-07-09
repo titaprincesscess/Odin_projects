@@ -1,16 +1,26 @@
 // Function to perform the calculation based on operator and operands
-const RESULT = Document.querySelector(".results :first-child");
-const FUCNTION = Document.querySelector(".results :last-child");
+const RESULT = document.querySelector(".result");
+const FUNCTION = document.querySelector(".function");
+const EQUALS = document.querySelector(".equals");
+const BUTTONS = document.querySelectorAll('.buttons div');
+
+EQUALS.addEventListener('click', ()=>{
+  prompt("hello");
+});
 
 function calculate(operator, num1, num2) {
   switch (operator) {
     case "+":
+      FUNCTION.innerHTML = "ADDITION";
       return num1 + num2;
     case "-":
+      FUNCTION.innerHTML = "SUBTRACTION";
       return num1 - num2;
     case "*":
+      FUNCTION.innerHTML = "MULTIPLICATION";
       return num1 * num2;
     case "/":
+      FUNCTION.innerHTML = "DIVISION";
       if (num2 === 0) {
         return "Error: Division by zero";
       }
