@@ -3,6 +3,10 @@ const RESULT = document.querySelector(".result");
 const FUNCTION = document.querySelector(".function");
 const EQUALS = document.querySelector(".equals");
 const BUTTONS = document.querySelectorAll('.buttons div');
+var num1=[]; 
+var num2=[]; 
+var result=[];
+
 EQUALS.addEventListener('click', ()=>{
   prompt("hello");
 });
