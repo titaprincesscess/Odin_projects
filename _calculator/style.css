@@ -1,1 +1,13 @@
-/* # */
+/* #style sheet*/
+* {
+    border: 1px solid black;
+}
+.results, .results div {
+    display: flex;
+    flex-direction: column;
+}
+
+.buttons, .buttons div{
+display: flex;
+flex-direction: row;
+}
