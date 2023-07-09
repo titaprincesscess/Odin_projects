@@ -3,7 +3,7 @@ const RESULT = document.querySelector(".result");
 const FUNCTION = document.querySelector(".function");
 const EQUALS = document.querySelector(".equals");
 const BUTTONS = document.querySelectorAll('.buttons div');
-var reg = /[0-9]/;
+//var reg = /\d/;
 EQUALS.addEventListener('click', ()=>{
   prompt("hello");
 });
@@ -19,7 +19,7 @@ BUTTONS.forEach((button) =>{
       FUNCTION.innerHTML = "ADDITION";}
     else if(button.textContent =="/"){
       FUNCTION.innerHTML = "DIVISION";}
-    else if(button.textContent == reg){
+    else if(button.textContent ==/^\d+$/){
       RESULT.innerHTML = button.textContent ;}
 
 
