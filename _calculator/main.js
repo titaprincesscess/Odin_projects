@@ -1,8 +1,9 @@
 // Function to perform the calculation based on operator and operands
 const RESULT = document.querySelector(".result");
 const FUNCTION = document.querySelector(".function");
+const FUNCTIONS = document.querySelectorAll(".functions div");
+const NUMBUTTONS = document.querySelectorAll('.buttons div');
 const EQUALS = document.querySelector(".equals");
-const BUTTONS = document.querySelectorAll('.buttons div');
 var num1=""; 
 var num2="";
 var operator="";
@@ -12,15 +13,27 @@ EQUALS.addEventListener('click', ()=>{
   prompt("hello");
 });
 
-BUTTONS.forEach((button) =>{
+//inputing numbers 
+NUMBUTTONS.forEach((button) =>{
   button.addEventListener('click', ()=>{
-    
+  if(operator==""){//num1
+  if(button.textContent .match(/[0-9]+/)){
+    num1+=button.innerText;
+    RESULT.innerHTML +=button.textContent ;}
+  }
+  if(num1!="" && operator!=""){//num2
+      if(button.textContent.match(/[0-9]+/)){
+      RESULT.innerHTML+= button.textContent;
+       num2+=button.innerHTML; 
+       //num1=num1.slice(-1);
+    }}
+     
+  });
+});
 
-    if(button.textContent .match(/[0-9]+/)){
-      num1+=button.innerText;
-      RESULT.innerHTML +=button.textContent ;}
-
-    if(num1!=""){
+FUNCTIONS.forEach((button)=>{
+  button.addEventListener('click', ()=>{
+  if(num1!=""){
     if (button.textContent == "-"){
       operator=button.innerText;
       RESULT.innerHTML="";
@@ -42,39 +55,31 @@ BUTTONS.forEach((button) =>{
       RESULT.innerHTML=button.innerText;
       FUNCTION.innerHTML = "DIVISION";}
     }
-     if(num1!="" &&operator!=""){
-      //num2
-      if(button.textContent.match(/[0-9]+/)){
-      //RESULT.innerHTML="";
-      RESULT.innerHTML+= button.textContent;
-       num2+=button.innerHTML; 
-       //num1=num1.slice(-1);
-    }
-      //ready for any mathematical operations
-    }
-     if(num1!=""&&num2!=""&&operator!=""){
-      if (button.textContent == "-"){
-        operator=button.textContent;
-        result=num1-num2;
-      FUNCTION.innerHTML = "SUBTRACTION";}
-      else if (button.textContent =="*"){
-        operator=button.textContent;
-        result=num1*num2;
-        FUNCTION.innerHTML = "MULTIPLICATION";}
-      else if(button.textContent =="+"){
-        operator=button.textContent;
-        result=num1+num2;
-        FUNCTION.innerHTML = "ADDITION";}
-      else if(button.textContent =="/"){
-        operator=button.textContent;
-        result=num1/num2;
-        FUNCTION.innerHTML = "DIVISION";}
+    if(num1!=""&&num2!=""&&operator!=""){
+        if (button.textContent == "-"){
+          operator=button.textContent;
+          result=num1-num2;
+        FUNCTION.innerHTML = "SUBTRACTION";}
+        else if (button.textContent =="*"){
+          operator=button.textContent;
+          result=num1*num2;
+          FUNCTION.innerHTML = "MULTIPLICATION";}
+        else if(button.textContent =="+"){
+          operator=button.textContent;
+          result=num1+num2;
+          FUNCTION.innerHTML = "ADDITION";}
+        else if(button.textContent =="/"){
+          operator=button.textContent;
+          result=num1/num2;
+          FUNCTION.innerHTML = "DIVISION";}
+  
+          RESULT.innerHTML = result;
+      }
 
-        RESULT.innerHTML = result;
-    }
-     
-  });
+  })
 });
+
+
 
 function calculate(operator, num1, num2) {
   switch (operator) {
