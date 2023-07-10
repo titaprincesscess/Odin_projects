@@ -14,23 +14,24 @@ EQUALS.addEventListener('click', ()=>{
 
 BUTTONS.forEach((button) =>{
   button.addEventListener('click', ()=>{
-    num1+=button.innerText;
+    
 
     if(button.textContent .match(/[0-9]+/)){
+      num1+=button.innerText;
       RESULT.innerHTML +=button.textContent ;}
 
     if(num1!=""){
     if (button.textContent == "-"){
-      operator=button.textContent;
+      operator=button.innerText;
     FUNCTION.innerHTML = "SUBTRACTION";}
     else if (button.textContent =="*"){
-      operator=button.textContent;
+      operator=button.innerText;
       FUNCTION.innerHTML = "MULTIPLICATION";}
     else if(button.textContent =="+"){
-      operator=button.textContent;
+      operator=button.innerText;
       FUNCTION.innerHTML = "ADDITION";}
     else if(button.textContent =="/"){
-      operator=button.textContent;
+      operator=button.innerText;
       FUNCTION.innerHTML = "DIVISION";}
     }else if(num1!="" && operator!=""){
       //num2
@@ -54,6 +55,8 @@ BUTTONS.forEach((button) =>{
         operator=button.textContent;
         result=num1/num2;
         FUNCTION.innerHTML = "DIVISION";}
+
+        RESULT.innerHTML = result;
     }
      
   });
