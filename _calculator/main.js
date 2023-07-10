@@ -42,12 +42,14 @@ BUTTONS.forEach((button) =>{
       RESULT.innerHTML=button.innerText;
       FUNCTION.innerHTML = "DIVISION";}
     }
-     if(num1!="" && operator!=""){
+     if(num1!="" &&operator!=""){
       //num2
       if(button.textContent.match(/[0-9]+/)){
-      RESULT.innerHTML="";
-      RESULT.innerHTML=button.innerText;
-       num2+=button.innerHTML; }
+      //RESULT.innerHTML="";
+      RESULT.innerHTML+= button.textContent;
+       num2+=button.innerHTML; 
+       //num1=num1.slice(-1);
+    }
       //ready for any mathematical operations
     }
      if(num1!=""&&num2!=""&&operator!=""){
