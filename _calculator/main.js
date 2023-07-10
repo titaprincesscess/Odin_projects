@@ -44,9 +44,11 @@ FUNCTIONS.forEach((button)=>{
       RESULT.innerHTML="";
       FUNCTION.innerHTML = "ADDITION";}
     else if(button.textContent =="/"){
+      if(num2===0){
+        prompt("number should be greater than 0");
+      }
       operator=button.innerText;
       RESULT.innerHTML="";
-      
       FUNCTION.innerHTML = "DIVISION";}
     }
     if(num1!=""&&num2!=""&&operator!=""){
