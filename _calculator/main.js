@@ -54,19 +54,19 @@ FUNCTIONS.forEach((button)=>{
     if(num1!=""&&num2!=""&&operator!=""){
         if (button.textContent == "-"){
           operator=button.textContent;
-          result=num1-num2;
+          result=parseFloat(num1)-parseFloat(num2);
         FUNCTION.innerHTML = "SUBTRACTION";}
         else if (button.textContent =="*"){
           operator=button.textContent;
-          result=num1*num2;
+          result=parseFloat(num1)*parseFloat(num2);
           FUNCTION.innerHTML = "MULTIPLICATION";}
         else if(button.textContent =="+"){
           operator=button.textContent;
-          result=num1+num2;
+          result=parseFloat(num1)+parseFloat(num2);
           FUNCTION.innerHTML = "ADDITION";}
         else if(button.textContent =="/"){
           operator=button.textContent;
-          result=num1/num2;
+          result=parseFloat(num1)/parseFloat(num2);
           FUNCTION.innerHTML = "DIVISION";}
   
           RESULT.innerHTML = result;
