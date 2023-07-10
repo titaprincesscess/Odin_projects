@@ -23,15 +23,23 @@ BUTTONS.forEach((button) =>{
     if(num1!=""){
     if (button.textContent == "-"){
       operator=button.innerText;
+      RESULT.innerHTML="";
+      RESULT.innerHTML=button.innerText;
     FUNCTION.innerHTML = "SUBTRACTION";}
     else if (button.textContent =="*"){
       operator=button.innerText;
+      RESULT.innerHTML="";
+      RESULT.innerHTML=button.innerText;
       FUNCTION.innerHTML = "MULTIPLICATION";}
     else if(button.textContent =="+"){
       operator=button.innerText;
+      RESULT.innerHTML="";
+      RESULT.innerHTML=button.innerText;
       FUNCTION.innerHTML = "ADDITION";}
     else if(button.textContent =="/"){
       operator=button.innerText;
+      RESULT.innerHTML="";
+      RESULT.innerHTML=button.innerText;
       FUNCTION.innerHTML = "DIVISION";}
     }else if(num1!="" && operator!=""){
       //num2
