@@ -78,7 +78,7 @@ FUNCTIONS.forEach((button)=>{
 });
 
 RESULT.addEventListener('change', ()=>{
-  if(result===RESULT.innerHTML&&num1!=""&&num2!=""&&operator!=""){
+  if(result==RESULT.innerHTML){
           num1="";
           num2="";
           operator="";
