@@ -16,15 +16,17 @@ EQUALS.addEventListener('click', ()=>{
 //inputing numbers 
 NUMBUTTONS.forEach((button) =>{
   button.addEventListener('click', ()=>{
-  if(operator==""){//num1
   if(button.textContent .match(/[0-9]+/)){
-    num1+=button.innerText;
-    RESULT.innerHTML +=button.textContent ;}
-  }
-  if(num1!="" && operator!=""){//num2
-      if(button.textContent.match(/[0-9]+/)){
-      RESULT.innerHTML+= button.textContent;
-       num2+=button.innerHTML; }}
+    if(operator==""){//num1
+      num1+=button.innerText;
+      RESULT.innerHTML +=button.textContent ;}
+    if(num1!="" && operator!=""){//num2
+        RESULT.innerHTML+= button.textContent;
+        num2+=button.innerHTML; }
+     if(result===RESULT.innerHTML&&num1!=""&&num2!=""&&operator!=""){
+          
+      }
+    }
   });
 });
 
