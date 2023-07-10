@@ -4,8 +4,8 @@ const FUNCTION = document.querySelector(".function");
 const EQUALS = document.querySelector(".equals");
 const BUTTONS = document.querySelectorAll('.buttons div');
 var num1=""; 
+var num2="";
 var operator="";
-var num2=""; 
 var result="";
 
 EQUALS.addEventListener('click', ()=>{
@@ -41,12 +41,16 @@ BUTTONS.forEach((button) =>{
       RESULT.innerHTML="";
       RESULT.innerHTML=button.innerText;
       FUNCTION.innerHTML = "DIVISION";}
-    }else if(num1!="" && operator!=""){
+    }
+     if(num1!="" && operator!=""){
       //num2
       if(button.textContent.match(/[0-9]+/)){
-      num2+=button.innerText;}
+      RESULT.innerHTML="";
+      RESULT.innerHTML=button.innerText;
+       num2+=button.innerHTML; }
       //ready for any mathematical operations
-    }else if(num1!=""&&num2!=""&&operator!=""){
+    }
+     if(num1!=""&&num2!=""&&operator!=""){
       if (button.textContent == "-"){
         operator=button.textContent;
         result=num1-num2;
