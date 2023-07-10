@@ -36,6 +36,24 @@ BUTTONS.forEach((button) =>{
       //num2
       if(button.textContent.match(/[0-9]+/)){
       num2+=button.innerText;}
+      //ready for any mathematical operations
+    }else if(num1!=""&&num2!=""&&operator!=""){
+      if (button.textContent == "-"){
+        operator=button.textContent;
+        result=num1-num2;
+      FUNCTION.innerHTML = "SUBTRACTION";}
+      else if (button.textContent =="*"){
+        operator=button.textContent;
+        result=num1*num2;
+        FUNCTION.innerHTML = "MULTIPLICATION";}
+      else if(button.textContent =="+"){
+        operator=button.textContent;
+        result=num1+num2;
+        FUNCTION.innerHTML = "ADDITION";}
+      else if(button.textContent =="/"){
+        operator=button.textContent;
+        result=num1/num2;
+        FUNCTION.innerHTML = "DIVISION";}
     }
      
   });
