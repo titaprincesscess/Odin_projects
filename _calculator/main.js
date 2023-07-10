@@ -24,10 +24,7 @@ NUMBUTTONS.forEach((button) =>{
   if(num1!="" && operator!=""){//num2
       if(button.textContent.match(/[0-9]+/)){
       RESULT.innerHTML+= button.textContent;
-       num2+=button.innerHTML; 
-       //num1=num1.slice(-1);
-    }}
-     
+       num2+=button.innerHTML; }}
   });
 });
 
@@ -37,22 +34,19 @@ FUNCTIONS.forEach((button)=>{
     if (button.textContent == "-"){
       operator=button.innerText;
       RESULT.innerHTML="";
-      RESULT.innerHTML=button.innerText;
     FUNCTION.innerHTML = "SUBTRACTION";}
     else if (button.textContent =="*"){
       operator=button.innerText;
       RESULT.innerHTML="";
-      RESULT.innerHTML=button.innerText;
       FUNCTION.innerHTML = "MULTIPLICATION";}
     else if(button.textContent =="+"){
       operator=button.innerText;
       RESULT.innerHTML="";
-      RESULT.innerHTML=button.innerText;
       FUNCTION.innerHTML = "ADDITION";}
     else if(button.textContent =="/"){
       operator=button.innerText;
       RESULT.innerHTML="";
-      RESULT.innerHTML=button.innerText;
+      
       FUNCTION.innerHTML = "DIVISION";}
     }
     if(num1!=""&&num2!=""&&operator!=""){
