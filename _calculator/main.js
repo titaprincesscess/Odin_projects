@@ -70,6 +70,9 @@ FUNCTIONS.forEach((button)=>{
           FUNCTION.innerHTML = "DIVISION";}
   
           RESULT.innerHTML = result;
+        if(result===RESULT.innerHTML&&num1!=""&&num2!=""&&operator!=""){
+          
+        }
       }
 
   })
