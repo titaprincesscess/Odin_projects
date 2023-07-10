@@ -23,7 +23,7 @@ NUMBUTTONS.forEach((button) =>{
     if(num1!="" && operator!=""){//num2
         RESULT.innerHTML+= button.textContent;
         num2+=button.innerHTML; }
-     if(result===RESULT.innerHTML&&num1!=""&&num2!=""&&operator!=""){
+    if(result===RESULT.innerHTML&&num1!=""&&num2!=""&&operator!=""){
           
       }
     }
@@ -72,14 +72,18 @@ FUNCTIONS.forEach((button)=>{
           FUNCTION.innerHTML = "DIVISION";}
   
           RESULT.innerHTML = result;
-        if(result===RESULT.innerHTML&&num1!=""&&num2!=""&&operator!=""){
-          
-        }
+       
       }
-
   })
 });
 
+RESULT.addEventListener('change', ()=>{
+  if(result===RESULT.innerHTML&&num1!=""&&num2!=""&&operator!=""){
+          num1="";
+          num2="";
+          operator="";
+  }
+});
 
 
 function calculate(operator, num1, num2) {
