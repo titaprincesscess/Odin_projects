@@ -13,6 +13,9 @@
 .results div {
     height: 48px;
 }
+.result{
+    font-size: 53px;
+}
 .buttons, .buttons div, .footer{
 display: flex;
 flex-direction: row;

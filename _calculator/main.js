@@ -4,15 +4,11 @@ const FUNCTION = document.querySelector(".function");
 const FUNCTIONS = document.querySelectorAll(".functions div");
 const NUMBUTTONS = document.querySelectorAll('.buttons div');
 const EQUALS = document.querySelector(".equals");
+const CLEAR = document.querySelector(".clear");
 var num1=""; 
 var num2="";
 var operator="";
 var result="";
-
-EQUALS.addEventListener('click', ()=>{
-  prompt("hello");
-});
-
 //inputing numbers 
 NUMBUTTONS.forEach((button) =>{
   button.addEventListener('click', ()=>{
@@ -25,7 +21,6 @@ NUMBUTTONS.forEach((button) =>{
       if(RESULT.innerHTML!=""){RESULT.innerHTML="";}
         RESULT.innerHTML+= button.textContent;
         num2+=button.innerHTML; }
-   
     }
    
   });
@@ -54,7 +49,7 @@ FUNCTIONS.forEach((button)=>{
       RESULT.innerHTML="";
       FUNCTION.innerHTML = "DIVISION";}
     }
-    if(num1!=""&&num2!=""&&operator!=""){//operator bug; 
+    if(num1!=""&&num2!=""&&operator!=""){//operator bug; operand
         if (button.textContent == "-"){
           operator=button.textContent;
           result=parseFloat(num1)-parseFloat(num2);
@@ -85,6 +80,16 @@ FUNCTIONS.forEach((button)=>{
 
   })
 });
+
+EQUALS.addEventListener('click', ()=>{
+  prompt("hello");
+});
+// CLEAR.addEventListener('click',()=>{
+//         num1="";
+//         num2="";
+//         result="";
+//         operator="";
+// })
 
 
 
