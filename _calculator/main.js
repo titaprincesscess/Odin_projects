@@ -17,16 +17,17 @@ EQUALS.addEventListener('click', ()=>{
 NUMBUTTONS.forEach((button) =>{
   button.addEventListener('click', ()=>{
   if(button.textContent .match(/[0-9]+/)){
+
     if(operator==""){//num1
       num1+=button.innerText;
       RESULT.innerHTML +=button.textContent ;}
-    if(num1!="" && operator!=""){//num2
+    else if(num1!="" && operator!=""){//num2
+      if(RESULT.innerHTML!=""){RESULT.innerHTML="";}
         RESULT.innerHTML+= button.textContent;
         num2+=button.innerHTML; }
-    if(result===RESULT.innerHTML&&num1!=""&&num2!=""&&operator!=""){
-          
-      }
+   
     }
+   
   });
 });
 
@@ -53,29 +54,33 @@ FUNCTIONS.forEach((button)=>{
       RESULT.innerHTML="";
       FUNCTION.innerHTML = "DIVISION";}
     }
-    if(num1!=""&&num2!=""&&operator!=""){
+    if(num1!=""&&num2!=""&&operator!=""){//operator bug; 
         if (button.textContent == "-"){
           operator=button.textContent;
           result=parseFloat(num1)-parseFloat(num2);
+          RESULT.innerHTML = result;
         FUNCTION.innerHTML = "SUBTRACTION";}
         else if (button.textContent =="*"){
           operator=button.textContent;
           result=parseFloat(num1)*parseFloat(num2);
+          RESULT.innerHTML = result;
           FUNCTION.innerHTML = "MULTIPLICATION";}
         else if(button.textContent =="+"){
           operator=button.textContent;
           result=parseFloat(num1)+parseFloat(num2);
+          RESULT.innerHTML = result;
           FUNCTION.innerHTML = "ADDITION";}
         else if(button.textContent =="/"){
           operator=button.textContent;
           result=parseFloat(num1)/parseFloat(num2);
-          FUNCTION.innerHTML = "DIVISION";}
-  
           RESULT.innerHTML = result;
-       
+          FUNCTION.innerHTML = "DIVISION";}
       }
+
       if(result==RESULT.innerHTML&&num1!=""&&num2!=""&&operator!=""){
-        
+        num1=result;
+        num2="";
+        result="";
       }
 
   })
