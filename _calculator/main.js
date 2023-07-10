@@ -74,16 +74,13 @@ FUNCTIONS.forEach((button)=>{
           RESULT.innerHTML = result;
        
       }
+      if(result==RESULT.innerHTML&&num1!=""&&num2!=""&&operator!=""){
+        
+      }
+
   })
 });
 
-RESULT.addEventListener('change', ()=>{
-  if(result==RESULT.innerHTML){
-          num1="";
-          num2="";
-          operator="";
-  }
-});
 
 
 function calculate(operator, num1, num2) {
