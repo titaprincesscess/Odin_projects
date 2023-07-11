@@ -13,16 +13,17 @@ var result="";
 NUMBUTTONS.forEach((button) =>{
   button.addEventListener('click', ()=>{
   if(button.textContent .match(/[0-9]+/)){
-
     if(operator==""){//num1
       num1+=button.innerText;
       RESULT.innerHTML +=button.textContent ;}
-    else if(num1!="" && operator!=""){//num2
+
+    else if(num1!="" || operator!=""){//num2
       if(RESULT.innerHTML!=""){RESULT.innerHTML="";}
-        RESULT.innerHTML+= button.textContent;
-        num2+=button.innerHTML; }
-    }
-   
+      
+        RESULT.innerHTML+= button.innerHTML;
+        num2+=button.innerHTML; 
+    
+        }}
   });
 });
 
@@ -84,12 +85,14 @@ FUNCTIONS.forEach((button)=>{
 EQUALS.addEventListener('click', ()=>{
   prompt("hello");
 });
-// CLEAR.addEventListener('click',()=>{
-//         num1="";
-//         num2="";
-//         result="";
-//         operator="";
-// })
+CLEAR.addEventListener('click',()=>{
+        num1="";
+        num2="";
+        result="";
+        operator="";
+        FUNCTION.innerHTML ="";
+        RESULT.innerHTML ="";
+})
 
 
 
