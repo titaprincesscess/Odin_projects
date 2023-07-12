@@ -8,6 +8,7 @@ const CLEAR = document.querySelector(".clear");
 var num1=""; 
 var num2="";
 var operator="";
+var operand="";
 var result="";
 //inputing numbers 
 NUMBUTTONS.forEach((button) =>{
@@ -17,11 +18,13 @@ NUMBUTTONS.forEach((button) =>{
       num1+=button.innerText;
       RESULT.innerHTML +=button.textContent ;}
 
-    else if(num1!="" || operator!=""){//num2
-      if(RESULT.innerHTML!=""){RESULT.innerHTML="";}
-      
+    else if(num1!="" || operator!=""){//num2 
+      if(RESULT.innerHTML!=""){RESULT.innerHTML="";}//bug
         RESULT.innerHTML+= button.innerHTML;
-        num2+=button.innerHTML; 
+        num2+=RESULT.innerHTML; 
+      // if(num2.length==1){
+      //   RESULT.innerHTML+= button.innerHTML;
+      //   num2+=button.innerHTML; }
     
         }}
   });
