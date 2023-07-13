@@ -11,7 +11,7 @@
     flex-direction: column;
 }
 .results div {
-    height: 48px;
+    height: 50px;
 }
 .result{
     font-size: 53px;
@@ -26,6 +26,6 @@ flex-direction: row;
    text-align: center;
 }
 .buttons div{
-    height: 19px;
+    height: 18px;
     flex: auto;
 }
