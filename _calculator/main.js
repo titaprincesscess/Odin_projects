@@ -19,7 +19,7 @@ NUMBUTTONS.forEach((button) =>{
       num1+=button.textContent;
       RESULT.innerHTML +=button.textContent ;}
     if(num1!=""&& operator!=""&&num2==""){//num2 
-      if(RESULT.textContent!=""){RESULT.textContent=" ";}//bug
+      if(RESULT.textContent!=""){RESULT.textContent=" ";}
       num2+=button.textContent;
       RESULT.innerHTML+= button.textContent;
         }else if(num1!=""&& operator!=""&&num2!=""){
@@ -54,22 +54,22 @@ FUNCTIONS.forEach((button)=>{
       FUNCTION.innerHTML = "DIVISION";}
     }
     if(num1!=""&&num2!=""&&operator!=""){//operator bug; operator does not retain the  first value
-        if (button.textContent == "-"){
+        if (operator == "-"){
          // operator=button.textContent;
           result=parseFloat(num1)-parseFloat(num2);
           RESULT.innerHTML = result;
-        FUNCTION.innerHTML = "SUBTRACTION";}
-        else if (button.textContent =="*"){
+          FUNCTION.innerHTML = "SUBTRACTION";}
+        else if (operator =="*"){
           //operator=button.textContent;
           result=parseFloat(num1)*parseFloat(num2);
           RESULT.innerHTML = result;
           FUNCTION.innerHTML = "MULTIPLICATION";}
-        else if(button.textContent =="+"){
+        else if(operator =="+"){
           //operator=button.textContent;
           result=parseFloat(num1)+parseFloat(num2);
           RESULT.innerHTML = result;
           FUNCTION.innerHTML = "ADDITION";}
-        else if(button.textContent =="/"){
+        else if(operator =="/"){
           //operator=button.textContent;
           result=parseFloat(num1)/parseFloat(num2);
           RESULT.innerHTML = result;
