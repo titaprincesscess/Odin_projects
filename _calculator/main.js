@@ -8,7 +8,7 @@ const CLEAR = document.querySelector(".clear");
 var num1=""; 
 var num2="";
 var operator="";
-var operand="";
+//var operand="";
 var result="";
 //inputing numbers 
 NUMBUTTONS.forEach((button) =>{
@@ -54,22 +54,7 @@ FUNCTIONS.forEach((button)=>{
       FUNCTION.innerHTML = "DIVISION";}
     }
     if(num1!=""&&num2!=""&&operator!=""){
-        if (operator == "-"){
-          result=parseFloat(num1)-parseFloat(num2);
-          RESULT.innerHTML = result;
-          FUNCTION.innerHTML = "SUBTRACTION";}
-        else if (operator =="*"){
-          result=parseFloat(num1)*parseFloat(num2);
-          RESULT.innerHTML = result;
-          FUNCTION.innerHTML = "MULTIPLICATION";}
-        else if(operator =="+"){
-          result=parseFloat(num1)+parseFloat(num2);
-          RESULT.innerHTML = result;
-          FUNCTION.innerHTML = "ADDITION";}
-        else if(operator =="/"){
-          result=parseFloat(num1)/parseFloat(num2);
-          RESULT.innerHTML = result;
-          FUNCTION.innerHTML = "DIVISION";}
+       operatorValue();
       }
 
       if(result==RESULT.innerHTML&&num1!=""&&num2!=""&&operator!=""){
@@ -86,22 +71,7 @@ FUNCTIONS.forEach((button)=>{
 
 EQUALS.addEventListener('click', ()=>{
   if(num1!=""&&num2!=""){
-    if(operator=="+"){
-      result=parseFloat(num1)+parseFloat(num2);
-          RESULT.innerHTML = result;
-          FUNCTION.innerHTML = "ADDITION";}
-    else if(operator=="-"){
-      result=parseFloat(num1)-parseFloat(num2);
-          RESULT.innerHTML = result;
-          FUNCTION.innerHTML = "ADDITION";}
-    else if(operator=="*"){
-      result=parseFloat(num1)*parseFloat(num2);
-          RESULT.innerHTML = result;
-          FUNCTION.innerHTML = "ADDITION";}
-    else if(operator =="/"){
-      result=parseFloat(num1)/parseFloat(num2);
-      RESULT.innerHTML = result;
-      FUNCTION.innerHTML = "DIVISION";}
+  operatorValue();
 }
 });
 CLEAR.addEventListener('click',()=>{
@@ -112,4 +82,23 @@ CLEAR.addEventListener('click',()=>{
         operand="";
         FUNCTION.innerHTML ="";
         RESULT.innerHTML ="";
-})
+});
+
+function operatorValue() {
+  if(operator=="+"){
+    result=parseFloat(num1)+parseFloat(num2);
+        RESULT.innerHTML = result;
+        FUNCTION.innerHTML = "ADDITION";}
+  else if(operator=="-"){
+    result=parseFloat(num1)-parseFloat(num2);
+        RESULT.innerHTML = result;
+        FUNCTION.innerHTML = "ADDITION";}
+  else if(operator=="*"){
+    result=parseFloat(num1)*parseFloat(num2);
+        RESULT.innerHTML = result;
+        FUNCTION.innerHTML = "ADDITION";}
+  else if(operator =="/"){
+    result=parseFloat(num1)/parseFloat(num2);
+    RESULT.innerHTML = result;
+    FUNCTION.innerHTML = "DIVISION";}
+}

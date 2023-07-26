@@ -6,6 +6,10 @@
 .function{
     align-items: end;
 }
+.functions div {
+    height: 41px;
+    flex: auto;
+}
 .results, .results div {
     display: flex;
     flex-direction: column;
@@ -16,7 +20,7 @@
 .result{
     font-size: 53px;
 }
-.buttons, .buttons div, .footer{
+.buttons, .buttons div, .functions, .footer{
 display: flex;
 flex-direction: row;
 }
