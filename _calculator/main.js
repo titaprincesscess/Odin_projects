@@ -53,50 +53,24 @@ FUNCTIONS.forEach((button)=>{
       RESULT.innerHTML="";
       FUNCTION.innerHTML = "DIVISION";}
     }
-    if(num1!=""&&num2!=""&&operator!=""){//operator bug; operator does not retain the  first value
+    if(num1!=""&&num2!=""&&operator!=""){
         if (operator == "-"){
-         // operator=button.textContent;
           result=parseFloat(num1)-parseFloat(num2);
           RESULT.innerHTML = result;
           FUNCTION.innerHTML = "SUBTRACTION";}
         else if (operator =="*"){
-          //operator=button.textContent;
           result=parseFloat(num1)*parseFloat(num2);
           RESULT.innerHTML = result;
           FUNCTION.innerHTML = "MULTIPLICATION";}
         else if(operator =="+"){
-          //operator=button.textContent;
           result=parseFloat(num1)+parseFloat(num2);
           RESULT.innerHTML = result;
           FUNCTION.innerHTML = "ADDITION";}
         else if(operator =="/"){
-          //operator=button.textContent;
           result=parseFloat(num1)/parseFloat(num2);
           RESULT.innerHTML = result;
           FUNCTION.innerHTML = "DIVISION";}
       }
-    //   if(num1!=""&&operand==""){//operand bug
-    //     if (button.textContent == "-"){
-    //       operand=button.textContent;
-    //       result=parseFloat(num1)-parseFloat(num2);
-    //       RESULT.innerHTML = result;
-    //     FUNCTION.innerHTML = "SUBTRACTION";}
-    //     else if (button.textContent =="*"){
-    //       operand=button.textContent;
-    //       result=parseFloat(num1)*parseFloat(num2);
-    //       RESULT.innerHTML = result;
-    //       FUNCTION.innerHTML = "MULTIPLICATION";}
-    //     else if(button.textContent =="+"){
-    //       operand=button.textContent;
-    //       result=parseFloat(num1)+parseFloat(num2);
-    //       RESULT.innerHTML = result;
-    //       FUNCTION.innerHTML = "ADDITION";}
-    //     else if(button.textContent =="/"){
-    //       operand=button.textContent;
-    //       result=parseFloat(num1)/parseFloat(num2);
-    //       RESULT.innerHTML = result;
-    //       FUNCTION.innerHTML = "DIVISION";}
-      // }
 
       if(result==RESULT.innerHTML&&num1!=""&&num2!=""&&operator!=""){
         num1=result;
@@ -104,16 +78,31 @@ FUNCTIONS.forEach((button)=>{
         result="";
         if(operator!=button.textContent){ //delay change of operand value
           operator=button.textContent;
-          FUNCTION.innerText=button.textContent;
-        }
-        
+          FUNCTION.innerText=button.nodeValue; }
       }
 
   })
 });
 
 EQUALS.addEventListener('click', ()=>{
-  prompt("hello");
+  if(num1!=""&&num2!=""){
+    if(operator=="+"){
+      result=parseFloat(num1)+parseFloat(num2);
+          RESULT.innerHTML = result;
+          FUNCTION.innerHTML = "ADDITION";}
+    else if(operator=="-"){
+      result=parseFloat(num1)-parseFloat(num2);
+          RESULT.innerHTML = result;
+          FUNCTION.innerHTML = "ADDITION";}
+    else if(operator=="*"){
+      result=parseFloat(num1)*parseFloat(num2);
+          RESULT.innerHTML = result;
+          FUNCTION.innerHTML = "ADDITION";}
+    else if(operator =="/"){
+      result=parseFloat(num1)/parseFloat(num2);
+      RESULT.innerHTML = result;
+      FUNCTION.innerHTML = "DIVISION";}
+}
 });
 CLEAR.addEventListener('click',()=>{
         num1="";
@@ -124,27 +113,3 @@ CLEAR.addEventListener('click',()=>{
         FUNCTION.innerHTML ="";
         RESULT.innerHTML ="";
 })
-
-
-
-function calculate(operator, num1, num2) {
-  switch (operator) {
-    case "+":
-      FUNCTION.innerHTML = "ADDITION";
-      return num1 + num2;
-    case "-":
-      FUNCTION.innerHTML = "SUBTRACTION";
-      return num1 - num2;
-    case "*":
-      FUNCTION.innerHTML = "MULTIPLICATION";
-      return num1 * num2;
-    case "/":
-      FUNCTION.innerHTML = "DIVISION";
-      if (num2 === 0) {
-        return "Error: Division by zero";
-      }
-      return num1 / num2;
-    default:
-      return "Error: Invalid operator";
-  }
-}
