@@ -15,7 +15,7 @@ NUMBUTTONS.forEach((button) =>{
   button.addEventListener('click', ()=>{
   if(button.textContent .match(/[0-9]+/)){
     
-    if(operator==""){//num1
+    if(num2==""&&operator==""){//num1
       num1+=button.textContent;
       RESULT.innerHTML +=button.textContent ;}
     if(num1!=""&& operator!=""&&num2==""){//num2 
@@ -102,6 +102,11 @@ FUNCTIONS.forEach((button)=>{
         num1=result;
         num2="";
         result="";
+        if(operator!=button.textContent){ //delay change of operand value
+          operator=button.textContent;
+          FUNCTION.innerText=button.textContent;
+        }
+        
       }
 
   })
