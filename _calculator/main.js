@@ -36,22 +36,22 @@ FUNCTIONS.forEach((button)=>{
     if (button.textContent == "-"){
       operator=button.innerText;
       RESULT.innerHTML="";
-    FUNCTION.innerHTML = "SUBTRACTION";}
+    FUNCTION.innerHTML = operator;}
     else if (button.textContent =="*"){
       operator=button.innerText;
       RESULT.innerHTML="";
-      FUNCTION.innerHTML = "MULTIPLICATION";}
+      FUNCTION.innerHTML = operator;}
     else if(button.textContent =="+"){
       operator=button.innerText;
       RESULT.innerHTML="";
-      FUNCTION.innerHTML = "ADDITION";}
+      FUNCTION.innerHTML = operator;}
     else if(button.textContent =="/"){
       if(num2===0){
         prompt("number should be greater than 0");
       }
       operator=button.innerText;
       RESULT.innerHTML="";
-      FUNCTION.innerHTML = "DIVISION";}
+      FUNCTION.innerHTML = operator;}
     }
     if(num1!=""&&num2!=""&&operator!=""){
        operatorValue();
@@ -63,7 +63,7 @@ FUNCTIONS.forEach((button)=>{
         result="";
         if(operator!=button.textContent){ //delay change of operand value
           operator=button.textContent;
-          FUNCTION.innerText=button.nodeValue; }
+          FUNCTION.innerText=button.innerText; }
       }
 
   })
@@ -88,17 +88,17 @@ function operatorValue() {
   if(operator=="+"){
     result=parseFloat(num1)+parseFloat(num2);
         RESULT.innerHTML = result;
-        FUNCTION.innerHTML = "ADDITION";}
+        FUNCTION.innerHTML = operator;}
   else if(operator=="-"){
     result=parseFloat(num1)-parseFloat(num2);
         RESULT.innerHTML = result;
-        FUNCTION.innerHTML = "ADDITION";}
+        FUNCTION.innerHTML = operator;}
   else if(operator=="*"){
     result=parseFloat(num1)*parseFloat(num2);
         RESULT.innerHTML = result;
-        FUNCTION.innerHTML = "ADDITION";}
+        FUNCTION.innerHTML = operator;}
   else if(operator =="/"){
     result=parseFloat(num1)/parseFloat(num2);
     RESULT.innerHTML = result;
-    FUNCTION.innerHTML = "DIVISION";}
+    FUNCTION.innerHTML = operator;}
 }
