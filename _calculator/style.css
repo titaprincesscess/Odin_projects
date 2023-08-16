@@ -49,4 +49,5 @@ flex-direction: row;
 .functions, .buttons , .footer{
     background-color:#e3e6ea;
     justify-content: space-between;
+    
 }
